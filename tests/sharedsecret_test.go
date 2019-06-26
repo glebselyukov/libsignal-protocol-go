@@ -2,9 +2,9 @@ package tests
 
 import (
 	"encoding/base64"
-	"github.com/RadicalApp/libsignal-protocol-go/ecc"
-	"github.com/RadicalApp/libsignal-protocol-go/kdf"
-	"github.com/RadicalApp/libsignal-protocol-go/logger"
+	"github.com/eliasnaur/libsignal-protocol-go/ecc"
+	"github.com/eliasnaur/libsignal-protocol-go/kdf"
+	"github.com/eliasnaur/libsignal-protocol-go/logger"
 	"testing"
 )
 

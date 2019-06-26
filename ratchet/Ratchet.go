@@ -6,11 +6,11 @@ import (
 	"encoding/base64"
 	"encoding/binary"
 
-	"github.com/RadicalApp/libsignal-protocol-go/ecc"
-	"github.com/RadicalApp/libsignal-protocol-go/kdf"
-	"github.com/RadicalApp/libsignal-protocol-go/keys/chain"
-	"github.com/RadicalApp/libsignal-protocol-go/keys/root"
-	"github.com/RadicalApp/libsignal-protocol-go/keys/session"
+	"github.com/eliasnaur/libsignal-protocol-go/ecc"
+	"github.com/eliasnaur/libsignal-protocol-go/kdf"
+	"github.com/eliasnaur/libsignal-protocol-go/keys/chain"
+	"github.com/eliasnaur/libsignal-protocol-go/keys/root"
+	"github.com/eliasnaur/libsignal-protocol-go/keys/session"
 )
 
 var b64 = base64.StdEncoding.EncodeToString
