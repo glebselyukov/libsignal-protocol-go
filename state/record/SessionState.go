@@ -269,10 +269,10 @@ func (s *State) AddReceiverChain(senderRatchetKey ecc.ECPublicKeyable, chainKey 
 
 	// Create a Chain state object that will hold our sender key, chain key, and
 	// message keys.
-	chain := NewChain(senderKey, chainKey.(*chain.Key), []*message.Keys{})
+	receiverChain := NewChain(senderKey, chainKey.(*chain.Key), []*message.Keys{})
 
 	// Add the Chain state to our list of receiver chain states.
-	s.receiverChains = append(s.receiverChains, chain)
+	s.receiverChains = append(s.receiverChains, receiverChain)
 
 	// If our list of receiver chains is too big, delete the oldest entry.
 	if len(s.receiverChains) > maxReceiverChains {
@@ -286,10 +286,10 @@ func (s *State) AddReceiverChain(senderRatchetKey ecc.ECPublicKeyable, chainKey 
 func (s *State) SetSenderChain(senderRatchetKeyPair *ecc.ECKeyPair, chainKey session.ChainKeyable) {
 	// Create a Chain state object that will hold our sender key, chain key, and
 	// message keys.
-	chain := NewChain(senderRatchetKeyPair, chainKey.(*chain.Key), []*message.Keys{})
+	senderChain := NewChain(senderRatchetKeyPair, chainKey.(*chain.Key), []*message.Keys{})
 
 	// Set the sender chain.
-	s.senderChain = chain
+	s.senderChain = senderChain
 }
 
 // SenderChainKey will return the chain key of the session state.

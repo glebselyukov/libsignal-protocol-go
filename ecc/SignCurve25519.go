@@ -4,11 +4,33 @@ package ecc
 // See https://moderncrypto.org/mail-archive/curves/2014/000205.html for details.
 
 import (
+	"crypto/ed25519"
 	"crypto/sha512"
 
-	"github.com/agl/ed25519"
-	"github.com/agl/ed25519/edwards25519"
+	"github.com/prospik/libsignal-protocol-go/ecc/edwards25519"
 )
+
+/*
+
+This is due to different ed25519 private key formats. An ed25519 key starts out as a 32 byte seed. This seed is hashed
+with SHA512 to produce 64 bytes (a couple of bits are flipped too). The first 32 bytes of these are used to generate
+the public key (which is also 32 bytes), and the last 32 bytes are used in the generation of the signature.
+
+The Golang private key format is the 32 byte seed concatenated with the 32 byte public key.
+The private keys we are using are the 64 byte result of the hash
+(or possibly just 64 random bytes that are used the same way as the hash result).
+
+Since it’s not possible to reverse the hash, you can’t convert the 64 byte keys to a format that the Golang API
+will accept.
+
+You can produce a version of the Golang lib based on the existing package.
+
+The following code depends on the internal package golang.org/x/crypto/ed25519/internal/edwards25519,
+so if you want to use it you will need to copy that package out so that it is available to you code.
+It’s also very “rough and ready”, I’ve basically just copied the chunks of code needed
+from the existing code to get this to work.
+
+*/
 
 // sign signs the message with privateKey and returns a signature as a byte slice.
 func sign(privateKey *[32]byte, message []byte, random [64]byte) *[64]byte {
@@ -94,5 +116,22 @@ func verify(publicKey [32]byte, message []byte, signature *[64]byte) bool {
 	A_ed[31] |= signature[63] & 0x80
 	signature[63] &= 0x7F
 
-	return ed25519.Verify(&A_ed, message, signature)
+	sig := *signature
+
+	return ed25519.Verify(A_ed[:], message, sig[:])
+}
+
+// sign32 signs the message with privateKey and returns a signature as a byte slice.
+func sign32(privateKey [32]byte, message []byte, random [64]byte) (signature [64]byte) {
+	pk := [64]byte{}
+	copy(pk[:], privateKey[:32])
+	sig := ed25519.Sign(pk[:], message)
+	copy(signature[:], sig[:])
+
+	return signature
+}
+
+// verify32 checks whether the message has a valid signature.
+func verify32(publicKey [32]byte, message []byte, signature [64]byte) bool {
+	return ed25519.Verify(publicKey[:], message, signature[:])
 }

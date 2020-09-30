@@ -4,6 +4,7 @@ package identity
 
 import (
 	"encoding/hex"
+
 	"github.com/prospik/libsignal-protocol-go/ecc"
 )
 
