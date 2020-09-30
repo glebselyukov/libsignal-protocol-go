@@ -1,7 +1,7 @@
 package logger
 
 import (
-	"fmt"
+	"log"
 	"strings"
 	"time"
 )
@@ -18,7 +18,7 @@ func (d *defaultLogger) log(level, caller, msg string) {
 		return
 	}
 	t := time.Now()
-	fmt.Println(
+	log.Println(
 		"["+level+"]",
 		t.Format(time.RFC3339),
 		caller,
