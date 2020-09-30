@@ -1,9 +1,9 @@
 package tests
 
 import (
-	"fmt"
-	"github.com/prospik/libsignal-protocol-go/fingerprint"
 	"testing"
+
+	"github.com/prospik/libsignal-protocol-go/fingerprint"
 )
 
 // TestFingerprint will test printing key fingerprints.
@@ -21,6 +21,5 @@ func TestFingerprint(t *testing.T) {
 		bob.identityKeyPair.PublicKey().Serialize(),
 	)
 
-	fmt.Println(fp.DisplayText())
-
+	t.Log(fp.DisplayText())
 }
