@@ -1,8 +1,3 @@
-[![GoDoc](https://godoc.org/github.com/RadicalApp/goquery?status.png)](https://godoc.org/github.com/RadicalApp/libsignal-protocol-go)
-[![Go Report Card](https://goreportcard.com/badge/github.com/RadicalApp/libsignal-protocol-go)](https://goreportcard.com/report/github.com/RadicalApp/libsignal-protocol-go)
-[![License](https://img.shields.io/aur/license/yaourt.svg)](https://www.gnu.org/licenses/quick-guide-gplv3.en.html)
-[![Twitter](https://img.shields.io/badge/twitter-@DustMessaging-blue.svg?style=flat)](https://twitter.com/dustmessaging)
-
 libsignal-protocol-go
 =====================
 
@@ -12,7 +7,7 @@ Libsignal-protocol-go is a Go implementation of the Signal Client Protocol.
 Documentation
 -------------
 
-- [API Reference](https://godoc.org/github.com/RadicalApp/libsignal-protocol-go)
+- [API Reference](https://godoc.org/github.com/prospik/libsignal-protocol-go)
 
 For more information on how the Signal Protocol works:    
 - [Double Ratchet](https://whispersystems.org/docs/specifications/doubleratchet/)
@@ -25,7 +20,7 @@ Installation
 
 Install the Signal library using the "go get" command:
 
-    go get github.com/RadicalApp/libsignal-protocol-go/...
+    go get github.com/prospik/libsignal-protocol-go/...
 
 
 Usage
@@ -36,10 +31,10 @@ At install time, a signal client needs to generate its identity keys, registrati
 
 ```go
 import (
-	"github.com/RadicalApp/libsignal-protocol-go/serialize"
-	"github.com/RadicalApp/libsignal-protocol-go/session"
-	"github.com/RadicalApp/libsignal-protocol-go/state/record"
-	"github.com/RadicalApp/libsignal-protocol-go/util/keyhelper"
+	"github.com/prospik/libsignal-protocol-go/serialize"
+	"github.com/prospik/libsignal-protocol-go/session"
+	"github.com/prospik/libsignal-protocol-go/state/record"
+	"github.com/prospik/libsignal-protocol-go/util/keyhelper"
 )
 
 ...
@@ -55,7 +50,7 @@ if err != nil {
 }
 
 // Generate a registration id
-registrationID := keyhelper.GenerateRegistrationID(false)
+registrationID := keyhelper.GenerateRegistrationID()
 
 // Generate PreKeys
 preKeys, err := keyhelper.GeneratePreKeys(0, 100, serializer.PreKeyRecord)
@@ -203,7 +198,7 @@ A serializer must implement the serializer interfaces for the following structs:
 Here is an example of the constructor function for a `Serializer` that uses JSON implementations:
 
 ```go
-import "github.com/RadicalApp/libsignal-protocol-go/serializer"
+import "github.com/prospik/libsignal-protocol-go/serializer"
 
 // NewJSONSerializer will return a serializer for all Signal objects that will
 // be responsible for converting objects to and from JSON bytes.
