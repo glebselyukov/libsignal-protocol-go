@@ -1,13 +1,14 @@
 package tests
 
 import (
-	"fmt"
+	"testing"
+
 	"github.com/kr/pretty"
+
 	"github.com/prospik/libsignal-protocol-go/keys/prekey"
 	"github.com/prospik/libsignal-protocol-go/logger"
 	"github.com/prospik/libsignal-protocol-go/session"
 	"github.com/prospik/libsignal-protocol-go/state/record"
-	"testing"
 )
 
 // TestSerializing tests serialization and deserialization of Signal objects.
@@ -57,7 +58,6 @@ func TestSerializing(t *testing.T) {
 		t.FailNow()
 	}
 
-	fmt.Printf("Original Session Record: %# v\n", pretty.Formatter(loadedSession))
-	fmt.Printf("Deserialized Session Record: %# v\n", pretty.Formatter(deserializedSession))
-
+	t.Log("Original Session Record: %# v\n", pretty.Formatter(loadedSession))
+	t.Log("Deserialized Session Record: %# v\n", pretty.Formatter(deserializedSession))
 }

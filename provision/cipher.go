@@ -64,7 +64,6 @@ func Decrypt(privateKey string, content string) (string, error) {
 	sharedSecret := kdf.CalculateSharedSecret(masterEphemeral, bytehelper.SliceToArray(ourPrivateKey))
 	derivedSecretBytes, err := kdf.DeriveSecrets(sharedSecret[:], nil, []byte("Mixin Provisioning Message"), root.DerivedSecretsSize)
 	if err != nil {
-		fmt.Println(err)
 		return "", err
 	}
 	aesKey := derivedSecretBytes[:32]
