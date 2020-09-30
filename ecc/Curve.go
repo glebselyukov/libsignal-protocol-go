@@ -6,7 +6,7 @@ import (
 	"io"
 
 	"github.com/RadicalApp/complete"
-	"github.com/eliasnaur/libsignal-protocol-go/logger"
+	"github.com/prospik/libsignal-protocol-go/logger"
 	"golang.org/x/crypto/curve25519"
 )
 

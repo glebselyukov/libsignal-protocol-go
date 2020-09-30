@@ -2,11 +2,11 @@ package tests
 
 import (
 	"fmt"
-	"github.com/eliasnaur/libsignal-protocol-go/keys/prekey"
-	"github.com/eliasnaur/libsignal-protocol-go/logger"
-	"github.com/eliasnaur/libsignal-protocol-go/session"
-	"github.com/eliasnaur/libsignal-protocol-go/state/record"
 	"github.com/kr/pretty"
+	"github.com/prospik/libsignal-protocol-go/keys/prekey"
+	"github.com/prospik/libsignal-protocol-go/logger"
+	"github.com/prospik/libsignal-protocol-go/session"
+	"github.com/prospik/libsignal-protocol-go/state/record"
 	"testing"
 )
 

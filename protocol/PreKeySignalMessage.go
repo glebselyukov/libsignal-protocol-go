@@ -4,9 +4,9 @@ import (
 	"errors"
 	"strconv"
 
-	"github.com/eliasnaur/libsignal-protocol-go/ecc"
-	"github.com/eliasnaur/libsignal-protocol-go/keys/identity"
-	"github.com/eliasnaur/libsignal-protocol-go/util/optional"
+	"github.com/prospik/libsignal-protocol-go/ecc"
+	"github.com/prospik/libsignal-protocol-go/keys/identity"
+	"github.com/prospik/libsignal-protocol-go/util/optional"
 )
 
 // PreKeySignalMessageSerializer is an interface for serializing and deserializing

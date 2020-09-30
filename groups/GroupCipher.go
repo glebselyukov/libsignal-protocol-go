@@ -4,12 +4,12 @@ import (
 	"errors"
 	"strconv"
 
-	"github.com/eliasnaur/libsignal-protocol-go/cipher"
-	"github.com/eliasnaur/libsignal-protocol-go/ecc"
-	"github.com/eliasnaur/libsignal-protocol-go/groups/ratchet"
-	"github.com/eliasnaur/libsignal-protocol-go/groups/state/record"
-	"github.com/eliasnaur/libsignal-protocol-go/groups/state/store"
-	"github.com/eliasnaur/libsignal-protocol-go/protocol"
+	"github.com/prospik/libsignal-protocol-go/cipher"
+	"github.com/prospik/libsignal-protocol-go/ecc"
+	"github.com/prospik/libsignal-protocol-go/groups/ratchet"
+	"github.com/prospik/libsignal-protocol-go/groups/state/record"
+	"github.com/prospik/libsignal-protocol-go/groups/state/store"
+	"github.com/prospik/libsignal-protocol-go/protocol"
 )
 
 // NewGroupCipher will return a new group message cipher that can be used for

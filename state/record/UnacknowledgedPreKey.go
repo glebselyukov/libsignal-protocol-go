@@ -1,8 +1,8 @@
 package record
 
 import (
-	"github.com/eliasnaur/libsignal-protocol-go/ecc"
-	"github.com/eliasnaur/libsignal-protocol-go/util/optional"
+	"github.com/prospik/libsignal-protocol-go/ecc"
+	"github.com/prospik/libsignal-protocol-go/util/optional"
 )
 
 // NewUnackPreKeyMessageItems returns message items that are unacknowledged.

@@ -1,11 +1,11 @@
 package record
 
 import (
-	"github.com/eliasnaur/libsignal-protocol-go/ecc"
-	"github.com/eliasnaur/libsignal-protocol-go/kdf"
-	"github.com/eliasnaur/libsignal-protocol-go/keys/chain"
-	"github.com/eliasnaur/libsignal-protocol-go/keys/message"
-	"github.com/eliasnaur/libsignal-protocol-go/util/bytehelper"
+	"github.com/prospik/libsignal-protocol-go/ecc"
+	"github.com/prospik/libsignal-protocol-go/kdf"
+	"github.com/prospik/libsignal-protocol-go/keys/chain"
+	"github.com/prospik/libsignal-protocol-go/keys/message"
+	"github.com/prospik/libsignal-protocol-go/util/bytehelper"
 )
 
 // NewReceiverChainPair will return a new ReceiverChainPair object.
