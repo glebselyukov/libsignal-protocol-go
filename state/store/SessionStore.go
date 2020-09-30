@@ -1,8 +1,8 @@
 package store
 
 import (
-	"github.com/eliasnaur/libsignal-protocol-go/protocol"
-	"github.com/eliasnaur/libsignal-protocol-go/state/record"
+	"github.com/prospik/libsignal-protocol-go/protocol"
+	"github.com/prospik/libsignal-protocol-go/state/record"
 )
 
 // Session store is an interface for the persistent storage of session

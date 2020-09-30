@@ -9,18 +9,18 @@ import (
 
 	"syscall/js"
 
-	"github.com/eliasnaur/libsignal-protocol-go/ecc"
-	"github.com/eliasnaur/libsignal-protocol-go/groups"
-	"github.com/eliasnaur/libsignal-protocol-go/keys/identity"
-	"github.com/eliasnaur/libsignal-protocol-go/keys/prekey"
-	"github.com/eliasnaur/libsignal-protocol-go/logger"
-	"github.com/eliasnaur/libsignal-protocol-go/protocol"
-	"github.com/eliasnaur/libsignal-protocol-go/provision"
-	"github.com/eliasnaur/libsignal-protocol-go/serialize"
-	"github.com/eliasnaur/libsignal-protocol-go/session"
-	"github.com/eliasnaur/libsignal-protocol-go/util/bytehelper"
-	"github.com/eliasnaur/libsignal-protocol-go/util/keyhelper"
-	"github.com/eliasnaur/libsignal-protocol-go/util/optional"
+	"github.com/prospik/libsignal-protocol-go/ecc"
+	"github.com/prospik/libsignal-protocol-go/groups"
+	"github.com/prospik/libsignal-protocol-go/keys/identity"
+	"github.com/prospik/libsignal-protocol-go/keys/prekey"
+	"github.com/prospik/libsignal-protocol-go/logger"
+	"github.com/prospik/libsignal-protocol-go/protocol"
+	"github.com/prospik/libsignal-protocol-go/provision"
+	"github.com/prospik/libsignal-protocol-go/serialize"
+	"github.com/prospik/libsignal-protocol-go/session"
+	"github.com/prospik/libsignal-protocol-go/util/bytehelper"
+	"github.com/prospik/libsignal-protocol-go/util/keyhelper"
+	"github.com/prospik/libsignal-protocol-go/util/optional"
 )
 
 func generateIdentityKeyPair(this js.Value, args []js.Value) interface{} {

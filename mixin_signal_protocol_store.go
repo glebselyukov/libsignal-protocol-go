@@ -1,11 +1,11 @@
 package main
 
 import (
-	groupRecord "github.com/eliasnaur/libsignal-protocol-go/groups/state/record"
-	"github.com/eliasnaur/libsignal-protocol-go/keys/identity"
-	"github.com/eliasnaur/libsignal-protocol-go/protocol"
-	"github.com/eliasnaur/libsignal-protocol-go/serialize"
-	"github.com/eliasnaur/libsignal-protocol-go/state/record"
+	groupRecord "github.com/prospik/libsignal-protocol-go/groups/state/record"
+	"github.com/prospik/libsignal-protocol-go/keys/identity"
+	"github.com/prospik/libsignal-protocol-go/protocol"
+	"github.com/prospik/libsignal-protocol-go/serialize"
+	"github.com/prospik/libsignal-protocol-go/state/record"
 )
 
 func NewMixinSignalProtocolStore(serializer *serialize.Serializer) *MixinSignalProtocolStore {

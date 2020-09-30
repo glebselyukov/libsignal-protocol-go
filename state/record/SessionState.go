@@ -1,16 +1,16 @@
 package record
 
 import (
-	"github.com/eliasnaur/libsignal-protocol-go/ecc"
-	"github.com/eliasnaur/libsignal-protocol-go/kdf"
-	"github.com/eliasnaur/libsignal-protocol-go/keys/chain"
-	"github.com/eliasnaur/libsignal-protocol-go/keys/identity"
-	"github.com/eliasnaur/libsignal-protocol-go/keys/message"
-	"github.com/eliasnaur/libsignal-protocol-go/keys/root"
-	"github.com/eliasnaur/libsignal-protocol-go/keys/session"
-	"github.com/eliasnaur/libsignal-protocol-go/logger"
-	"github.com/eliasnaur/libsignal-protocol-go/util/errorhelper"
-	"github.com/eliasnaur/libsignal-protocol-go/util/optional"
+	"github.com/prospik/libsignal-protocol-go/ecc"
+	"github.com/prospik/libsignal-protocol-go/kdf"
+	"github.com/prospik/libsignal-protocol-go/keys/chain"
+	"github.com/prospik/libsignal-protocol-go/keys/identity"
+	"github.com/prospik/libsignal-protocol-go/keys/message"
+	"github.com/prospik/libsignal-protocol-go/keys/root"
+	"github.com/prospik/libsignal-protocol-go/keys/session"
+	"github.com/prospik/libsignal-protocol-go/logger"
+	"github.com/prospik/libsignal-protocol-go/util/errorhelper"
+	"github.com/prospik/libsignal-protocol-go/util/optional"
 )
 
 const maxMessageKeys int = 2000

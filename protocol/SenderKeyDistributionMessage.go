@@ -4,7 +4,7 @@ import (
 	"errors"
 	"strconv"
 
-	"github.com/eliasnaur/libsignal-protocol-go/ecc"
+	"github.com/prospik/libsignal-protocol-go/ecc"
 )
 
 // SenderKeyDistributionMessageSerializer is an interface for serializing and deserializing
