@@ -3,10 +3,10 @@ package serialize
 import (
 	"encoding/json"
 
-	groupRecord "github.com/eliasnaur/libsignal-protocol-go/groups/state/record"
-	"github.com/eliasnaur/libsignal-protocol-go/logger"
-	"github.com/eliasnaur/libsignal-protocol-go/protocol"
-	"github.com/eliasnaur/libsignal-protocol-go/state/record"
+	groupRecord "github.com/prospik/libsignal-protocol-go/groups/state/record"
+	"github.com/prospik/libsignal-protocol-go/logger"
+	"github.com/prospik/libsignal-protocol-go/protocol"
+	"github.com/prospik/libsignal-protocol-go/state/record"
 )
 
 // NewJSONSerializer will return a serializer for all Signal objects that will

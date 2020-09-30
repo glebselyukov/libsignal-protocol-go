@@ -1,9 +1,9 @@
 package record
 
 import (
-	"github.com/eliasnaur/libsignal-protocol-go/ecc"
-	"github.com/eliasnaur/libsignal-protocol-go/util/bytehelper"
-	"github.com/eliasnaur/libsignal-protocol-go/util/optional"
+	"github.com/prospik/libsignal-protocol-go/ecc"
+	"github.com/prospik/libsignal-protocol-go/util/bytehelper"
+	"github.com/prospik/libsignal-protocol-go/util/optional"
 )
 
 // PreKeySerializer is an interface for serializing and deserializing

@@ -5,9 +5,10 @@ import (
 	"testing"
 
 	"github.com/RadicalApp/complete"
-	"github.com/eliasnaur/libsignal-protocol-go/ecc"
-	"github.com/eliasnaur/libsignal-protocol-go/logger"
-	"github.com/eliasnaur/libsignal-protocol-go/util/keyhelper"
+
+	"github.com/prospik/libsignal-protocol-go/ecc"
+	"github.com/prospik/libsignal-protocol-go/logger"
+	"github.com/prospik/libsignal-protocol-go/util/keyhelper"
 )
 
 // TestIdentityKeys checks generating, signing, and verifying of identity keys.
@@ -31,7 +32,7 @@ func TestIdentityKeys(t *testing.T) {
 	logger.Info("  Signature:", signature)
 
 	// Validate the signature using the private key
-	//valid := ecc.Verify(publicKey.PublicKey().PublicKey(), message, &signature)
+	// valid := ecc.Verify(publicKey.PublicKey().PublicKey(), message, &signature)
 	logger.Info("Verifying signature against bytes:", message)
 	valid := ecc.VerifySignature(publicKey.PublicKey(), message, signature)
 	logger.Info("  Valid signature:", valid)

@@ -1,7 +1,7 @@
 package identity
 
 import (
-	"github.com/eliasnaur/libsignal-protocol-go/ecc"
+	"github.com/prospik/libsignal-protocol-go/ecc"
 )
 
 // NewKeyPair returns a new identity key with the given public and private keys.
@@ -15,8 +15,8 @@ func NewKeyPair(publicKey *Key, privateKey ecc.ECPrivateKeyable) *KeyPair {
 }
 
 // NewKeyPairFromBytes returns a new identity key from the given serialized bytes.
-//func NewKeyPairFromBytes(serialized []byte) KeyPair {
-//}
+// func NewKeyPairFromBytes(serialized []byte) KeyPair {
+// }
 
 // KeyPair is a holder for public and private identity key pair.
 type KeyPair struct {

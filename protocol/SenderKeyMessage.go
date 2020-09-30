@@ -4,8 +4,8 @@ import (
 	"errors"
 	"strconv"
 
-	"github.com/eliasnaur/libsignal-protocol-go/ecc"
-	"github.com/eliasnaur/libsignal-protocol-go/util/bytehelper"
+	"github.com/prospik/libsignal-protocol-go/ecc"
+	"github.com/prospik/libsignal-protocol-go/util/bytehelper"
 )
 
 // SenderKeyMessageSerializer is an interface for serializing and deserializing

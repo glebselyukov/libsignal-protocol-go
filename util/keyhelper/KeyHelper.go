@@ -7,9 +7,9 @@ import (
 	"time"
 
 	"github.com/RadicalApp/complete"
-	"github.com/eliasnaur/libsignal-protocol-go/ecc"
-	"github.com/eliasnaur/libsignal-protocol-go/keys/identity"
-	"github.com/eliasnaur/libsignal-protocol-go/state/record"
+	"github.com/prospik/libsignal-protocol-go/ecc"
+	"github.com/prospik/libsignal-protocol-go/keys/identity"
+	"github.com/prospik/libsignal-protocol-go/state/record"
 )
 
 // GenerateIdentityKeyPair generates an identity keypair used for

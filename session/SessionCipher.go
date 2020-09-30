@@ -4,15 +4,15 @@ import (
 	"errors"
 	"strconv"
 
-	"github.com/eliasnaur/libsignal-protocol-go/cipher"
-	"github.com/eliasnaur/libsignal-protocol-go/ecc"
-	"github.com/eliasnaur/libsignal-protocol-go/keys/chain"
-	"github.com/eliasnaur/libsignal-protocol-go/keys/message"
-	"github.com/eliasnaur/libsignal-protocol-go/logger"
-	"github.com/eliasnaur/libsignal-protocol-go/protocol"
-	"github.com/eliasnaur/libsignal-protocol-go/state/record"
-	"github.com/eliasnaur/libsignal-protocol-go/state/store"
-	"github.com/eliasnaur/libsignal-protocol-go/util/bytehelper"
+	"github.com/prospik/libsignal-protocol-go/cipher"
+	"github.com/prospik/libsignal-protocol-go/ecc"
+	"github.com/prospik/libsignal-protocol-go/keys/chain"
+	"github.com/prospik/libsignal-protocol-go/keys/message"
+	"github.com/prospik/libsignal-protocol-go/logger"
+	"github.com/prospik/libsignal-protocol-go/protocol"
+	"github.com/prospik/libsignal-protocol-go/state/record"
+	"github.com/prospik/libsignal-protocol-go/state/store"
+	"github.com/prospik/libsignal-protocol-go/util/bytehelper"
 )
 
 const maxFutureMessages = 5000
@@ -21,7 +21,7 @@ const maxFutureMessages = 5000
 // session. In order to use the session cipher, a session must have already
 // been created and stored using session.Builder.
 func NewCipher(builder *Builder, remoteAddress *protocol.SignalAddress) *Cipher {
-	cipher := &Cipher{
+	return &Cipher{
 		sessionStore:            builder.sessionStore,
 		preKeyMessageSerializer: builder.serializer.PreKeySignalMessage,
 		signalMessageSerializer: builder.serializer.SignalMessage,
@@ -30,15 +30,14 @@ func NewCipher(builder *Builder, remoteAddress *protocol.SignalAddress) *Cipher 
 		builder:                 builder,
 		identityKeyStore:        builder.identityKeyStore,
 	}
-
-	return cipher
 }
 
 func NewCipherFromSession(remoteAddress *protocol.SignalAddress,
 	sessionStore store.Session, preKeyStore store.PreKey, identityKeyStore store.IdentityKey,
 	preKeyMessageSerializer protocol.PreKeySignalMessageSerializer,
 	signalMessageSerializer protocol.SignalMessageSerializer) *Cipher {
-	cipher := &Cipher{
+
+	return &Cipher{
 		sessionStore:            sessionStore,
 		preKeyMessageSerializer: preKeyMessageSerializer,
 		signalMessageSerializer: signalMessageSerializer,
@@ -46,8 +45,6 @@ func NewCipherFromSession(remoteAddress *protocol.SignalAddress,
 		remoteAddress:           remoteAddress,
 		identityKeyStore:        identityKeyStore,
 	}
-
-	return cipher
 }
 
 // Cipher is the main entry point for Signal Protocol encrypt/decrypt operations.

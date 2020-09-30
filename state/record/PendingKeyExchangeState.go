@@ -1,9 +1,9 @@
 package record
 
 import (
-	"github.com/eliasnaur/libsignal-protocol-go/ecc"
-	"github.com/eliasnaur/libsignal-protocol-go/keys/identity"
-	"github.com/eliasnaur/libsignal-protocol-go/util/bytehelper"
+	"github.com/prospik/libsignal-protocol-go/ecc"
+	"github.com/prospik/libsignal-protocol-go/keys/identity"
+	"github.com/prospik/libsignal-protocol-go/util/bytehelper"
 )
 
 // NewPendingKeyExchange will return a new PendingKeyExchange object.
@@ -75,7 +75,7 @@ type PendingKeyExchange struct {
 	localIdentityKeyPair *identity.KeyPair
 }
 
-// structre will return a serializable structure of a pending key exchange
+// structure will return a serializable structure of a pending key exchange
 // so it can be persistently stored.
 func (p *PendingKeyExchange) structure() *PendingKeyExchangeStructure {
 	getSlice := bytehelper.ArrayToSlice

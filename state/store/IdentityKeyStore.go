@@ -1,8 +1,8 @@
 package store
 
 import (
-	"github.com/eliasnaur/libsignal-protocol-go/keys/identity"
-	"github.com/eliasnaur/libsignal-protocol-go/protocol"
+	"github.com/prospik/libsignal-protocol-go/keys/identity"
+	"github.com/prospik/libsignal-protocol-go/protocol"
 )
 
 // IdentityKey provides an interface to identity information.
