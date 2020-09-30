@@ -2,6 +2,7 @@ package record
 
 import (
 	"errors"
+
 	"github.com/prospik/libsignal-protocol-go/ecc"
 )
 

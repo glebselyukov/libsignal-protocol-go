@@ -6,7 +6,6 @@ import (
 	"encoding/json"
 	"strconv"
 	"strings"
-
 	"syscall/js"
 
 	"github.com/prospik/libsignal-protocol-go/ecc"

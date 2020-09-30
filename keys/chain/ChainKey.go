@@ -4,6 +4,7 @@ package chain
 import (
 	"crypto/hmac"
 	"crypto/sha256"
+
 	"github.com/prospik/libsignal-protocol-go/kdf"
 	"github.com/prospik/libsignal-protocol-go/keys/message"
 )

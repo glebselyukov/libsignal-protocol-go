@@ -2,6 +2,7 @@ package fingerprint
 
 import (
 	"fmt"
+
 	"github.com/prospik/libsignal-protocol-go/util/bytehelper"
 )
 

@@ -75,7 +75,7 @@ type PendingKeyExchange struct {
 	localIdentityKeyPair *identity.KeyPair
 }
 
-// structre will return a serializable structure of a pending key exchange
+// structure will return a serializable structure of a pending key exchange
 // so it can be persistently stored.
 func (p *PendingKeyExchange) structure() *PendingKeyExchangeStructure {
 	getSlice := bytehelper.ArrayToSlice

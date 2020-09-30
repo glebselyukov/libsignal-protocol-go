@@ -5,6 +5,7 @@ import (
 	"strconv"
 
 	proto "github.com/golang/protobuf/proto"
+
 	"github.com/prospik/libsignal-protocol-go/logger"
 	"github.com/prospik/libsignal-protocol-go/protocol"
 	"github.com/prospik/libsignal-protocol-go/util/bytehelper"

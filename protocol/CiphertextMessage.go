@@ -5,10 +5,14 @@ type CiphertextMessage interface {
 	Type() uint32
 }
 
-const UnsupportedVersion = 1
-const CurrentVersion = 3
+const (
+	UnsupportedVersion = 1
+	CurrentVersion     = 3
+)
 
-const WHISPER_TYPE = 2
-const PREKEY_TYPE = 3
-const SENDERKEY_TYPE = 4
-const SENDERKEY_DISTRIBUTION_TYPE = 5
+const (
+	WHISPER_TYPE                = 2
+	PREKEY_TYPE                 = 3
+	SENDERKEY_TYPE              = 4
+	SENDERKEY_DISTRIBUTION_TYPE = 5
+)
